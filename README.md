@@ -1,4 +1,8 @@
 # STViG-for-READS-V
+
+
+[[pdf](https://arxiv.org/pdf/2311.14775.pdf)]
+
 **The code will be released soon!**
 
 In this project, we propose a novel skeleton-based **S**patio**T**emporal **Vi**sion **G**raph neural network (**STViG**) for efficient, accurate, and timely **RE**al-time **A**utomated **D**etection of epileptic **S**eizures from surveillance **V**ideos (**READS-V**).
