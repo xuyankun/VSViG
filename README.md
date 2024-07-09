@@ -1,7 +1,7 @@
 # VSViG: Real-time Video-based Seizure Detection via Skeleton-based Spatiotemporal ViG
 
-
-[[pdf](https://arxiv.org/pdf/2311.14775.pdf)]
+This is official implementation of VSViG, here are some useful links:
+[ [pdf](https://arxiv.org/pdf/2311.14775.pdf) | [data](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video) ]
 
 **The code will be released soon!**
 
