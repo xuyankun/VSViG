@@ -1,6 +1,8 @@
 # VSViG: Real-time Video-based Seizure Detection via Skeleton-based Spatiotemporal ViG
 
-This is official implementation of VSViG, here are some useful links:
+This is the official implementation of VSViG, which is accepted by ECCV2024.
+
+Here are some useful links:
 [ [pdf](https://arxiv.org/pdf/2311.14775.pdf) | [data](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video) ]
 
 **The code will be released soon!**
@@ -18,5 +20,16 @@ In this work, we propose a skeleton-based VSViG model with a partitioning strate
 
 <img src="https://github.com/xuyankun/VSViG/blob/main/performance.gif" width="550px">
 
+## Citation:
 
+If this paper or dataset helps your research, please cite the paper:
+
+```
+@inproceedings{Xu2023VSViG,
+  title={VSViG: Real-time Video-based Seizure Detection via Skeleton-based Spatiotemporal ViG},
+  author={Yankun Xu and Junzhe Wang and Yun-Hsuan Chen and Jie Yang and Wenjie Ming and Shuangquan Wang and Mohamad Sawan},
+  booktitle={arXiv preprint arXiv:2311.14775},
+  year={2023}
+}
+```
 
