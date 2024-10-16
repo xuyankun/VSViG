@@ -2,9 +2,9 @@
 
 This is the official implementation of VSViG, which is accepted by ECCV2024.
 
-<a href="https://arxiv.org/pdf/2311.14775.pdf"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
-[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video)
-<!-- [ [pdf](https://arxiv.org/pdf/2311.14775.pdf) | [data](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video) ]-->
+> Paper:  <a href="https://arxiv.org/pdf/2311.14775.pdf"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
+
+> Dataset:  [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video)
 
 **The code will be released soon!**
 
