@@ -26,6 +26,16 @@ In this work, we propose a skeleton-based VSViG model with a partitioning strate
 If this paper or dataset helps your research, please cite the paper:
 
 ```
+
+@inproceedings{xu2024vsvig,
+  title={VSViG: Real-Time Video-Based Seizure Detection via Skeleton-Based Spatiotemporal ViG},
+  author={Xu, Yankun and Wang, Junzhe and Chen, Yun-Hsuan and Yang, Jie and Ming, Wenjie and Wang, Shuang and Sawan, Mohamad},
+  booktitle={European Conference on Computer Vision},
+  pages={228--245},
+  year={2024},
+  organization={Springer}
+}
+
 @inproceedings{Xu2023VSViG,
   title={VSViG: Real-time Video-based Seizure Detection via Skeleton-based Spatiotemporal ViG},
   author={Yankun Xu and Junzhe Wang and Yun-Hsuan Chen and Jie Yang and Wenjie Ming and Shuangquan Wang and Mohamad Sawan},
