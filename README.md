@@ -6,7 +6,7 @@ This is the official implementation of VSViG, which is accepted by ECCV2024.
 
 > Dataset:  [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video)
 
-**The code will be released soon!**
+<img src="https://github.com/xuyankun/VSViG/blob/main/performance.gif" width="550px">
 
 In this project, we propose a novel **V**ideo-based **S**eizure Detection via Skeleton-based Spatiotemporal **ViG** (**VSViG**) for efficient, accurate, and timely real-time automatic detection of epileptic seizures from surveillance videos .
 Previous video-based seizure detection studies did not rely on skeleton information because the public pre-tained pose estimation model cannot track the patient poses accurately. We manually annotate the pose label for the patients, and train our own custom for patient pose estimation. 
@@ -17,9 +17,20 @@ Medical scenarios, specifically in EMUs  (Epilepsy Monitoring Units), are very c
 
 You can test your own dataset (if your scenarios are very similar to ours, even patients with other movement-based diseases, e.g. PD) or fine-tune your own model with our provided custom pose estimation model [pose.pth](https://github.com/xuyankun/VSViG/blob/main/pose.pth). We utilize Openpose-lightweight to train the model, you can figure out how to implement it on your dataset in the original [Openpose-lightweight](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pytorch) project homepage. 
 
+## VSViG Implementation
 In this work, we propose a skeleton-based VSViG model with a partitioning strategy to recognize subtle seizure-related actions/behaviors, and generate probabilities rather than naive classification labels for timely detection. The figure below shows the performance of two seizure examples, $P$ stands for the real-time predictive probability/risk of seizure occurrence.
 
-<img src="https://github.com/xuyankun/VSViG/blob/main/performance.gif" width="550px">
+We have provided [VSViG model](https://github.com/xuyankun/VSViG/blob/main/VSViG.py) and its [training](https://github.com/xuyankun/VSViG/blob/main/train.py) code in this repository, and uploaded [utilized dataset](https://huggingface.co/datasets/xuyankun/WU-SAHZU-EMU-Video). We just provided raw video recordings with onset annotation, if you want to utilize our dataset, you have to preprocess them into video clips for training. It is worth noting that, due to rules from the hospital, we have to protect patients' privacy by masking faces, so that you cannot recognize subtle changes on their faces during the beginning phase of seizure onset. The provided annotation is based on real scenarios, so that you might achieve worse latency performance than the results in our paper. 
+
+The label for each clip should be in a probabilistic likelihood, and we recommend to label the clip as:
+```
+[Health, EEG onset]: 0
+[Clinical onset, ]: 1
+[EEG onset, Clinical onset]: 0 → 1 in an exponential way
+```
+
+We also provided the patch extraction operation [here](https://github.com/xuyankun/VSViG/blob/main/extract_patches.py), we simplified the operation by generating a patch with gaussian kernel based on each keypoint. You can either train your own model or test our pre-trained [VSViG-base]((https://github.com/xuyankun/VSViG/blob/main/VSViG-base.pth)) on custom or our dataset.
+
 
 ## Citation:
 
