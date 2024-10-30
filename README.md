@@ -29,7 +29,7 @@ The label for each clip should be in a probabilistic likelihood, and we recommen
 [EEG onset, Clinical onset]: 0 → 1 in an exponential way
 ```
 
-We also provided the patch extraction operation [here](https://github.com/xuyankun/VSViG/blob/main/extract_patches.py), we simplified the operation by generating a patch with gaussian kernel based on each keypoint. You can either train your own model or test our pre-trained [VSViG-base]((https://github.com/xuyankun/VSViG/blob/main/VSViG-base.pth)) on custom or our dataset.
+We also provided the patch extraction operation [here](https://github.com/xuyankun/VSViG/blob/main/extract_patches.py), we simplified the operation by generating a patch with gaussian kernel based on each keypoint. You can either train your own model or test our pre-trained [VSViG-base.pth](https://github.com/xuyankun/VSViG/blob/main/VSViG-base.pth) on custom or our dataset.
 
 
 ## Citation:
@@ -37,7 +37,6 @@ We also provided the patch extraction operation [here](https://github.com/xuyank
 If this paper or dataset helps your research, please cite the paper:
 
 ```
-
 @inproceedings{xu2024vsvig,
   title={VSViG: Real-Time Video-Based Seizure Detection via Skeleton-Based Spatiotemporal ViG},
   author={Xu, Yankun and Wang, Junzhe and Chen, Yun-Hsuan and Yang, Jie and Ming, Wenjie and Wang, Shuang and Sawan, Mohamad},
@@ -54,4 +53,18 @@ If this paper or dataset helps your research, please cite the paper:
   year={2023}
 }
 ```
+
+We also recommend our previous paper about EEG-based early seizure detection, which first proposed the probabilistic prediction concept for seizure detection task, also proposed rectified weighting strategy and decision-making rule can also enhance the detection latency performance.
+```
+@article{xu2024shorter,
+  title={Shorter latency of real-time epileptic seizure detection via probabilistic prediction},
+  author={Xu, Yankun and Yang, Jie and Ming, Wenjie and Wang, Shuang and Sawan, Mohamad},
+  journal={Expert Systems with Applications},
+  volume={236},
+  pages={121359},
+  year={2024},
+  publisher={Elsevier}
+}
+```
+
 
