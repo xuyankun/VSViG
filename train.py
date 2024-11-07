@@ -17,8 +17,8 @@ class vsvig_dataset(Dataset):
     def __getitem__(self,idx):
         target = float(self._labels[idx][1])
         data_idx = self._labels[idx][0]
-        data = torch.load(DATA_PATH)
-        kpts = torch.load(KPTS_DATA_PATH)
+        data = torch.load(PATH_TO_DATA) # Inputs: Batches, Frames, Points, Channles, Height, Width (B,30,15,3,32,32)
+        kpts = torch.load(PATH_TO_KPTS) # (B, 15, 2), where 15 is number of kpts, and 2 means coordinates (x, y) of each kpt
         data = data.squeeze(0)
         raw_order = list(np.arange(18)) # raw 18 keypoint COCO template
         new_order = [0,-3,-4] + list(np.arange(12)+2) + [1,-1,-2] # reorder them
@@ -39,8 +39,8 @@ class vsvig_dataset(Dataset):
 
 def train():
     dy_point_order = torch.load('PATH_TO_DYNAMIC_PARTITIONS')
-    data_path = PATH_TO_DATA
-    label_path = PATH_TO_LABEL
+    data_path = PATH_TO_DATA # Inputs: Batches, Frames, Points, Channles, Height, Width (B,30,15,3,32,32)
+    label_path = PATH_TO_LABEL # Outputs/Labels: Batches, 1 (0 to 1 probabilities/likelihoods) (B,1) 
     models = ['base', 'light']
     
     for m in models:
