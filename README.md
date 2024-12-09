@@ -29,7 +29,9 @@ The label for each clip should be in a probabilistic likelihood, and we recommen
 [EEG onset, Clinical onset]: 0 → 1 in an exponential way
 ```
 
-We also provided the patch extraction operation [here](https://github.com/xuyankun/VSViG/blob/main/extract_patches.py), we simplified the operation by generating a patch with gaussian kernel based on each keypoint. You can either train your own model or test our pre-trained [VSViG-base.pth](https://github.com/xuyankun/VSViG/blob/main/VSViG-base.pth) on custom or our dataset.
+We also provided the patch extraction operation [here](https://github.com/xuyankun/VSViG/blob/main/extract_patches.py), we simplified the operation by generating a patch with gaussian kernel based on each keypoint. We randomly generated [dynamic_partition_order](https://github.com/xuyankun/VSViG/blob/main/dy_point_order.pt) during the training phase, that has been proven to increase the performance. If you want to test our model with shuffled partition module, just add this file to the model. If you wan to train your own model, just randomly generate a new order file, and keep it same in model inference.
+
+You can either train your own model or test our pre-trained [VSViG-base.pth](https://github.com/xuyankun/VSViG/blob/main/VSViG-base.pth) on custom or our dataset.
 
 
 ## Citation:
