@@ -47,13 +47,6 @@ If this paper or dataset helps your research, please cite the paper:
   year={2024},
   organization={Springer}
 }
-
-@inproceedings{Xu2023VSViG,
-  title={VSViG: Real-time Video-based Seizure Detection via Skeleton-based Spatiotemporal ViG},
-  author={Yankun Xu and Junzhe Wang and Yun-Hsuan Chen and Jie Yang and Wenjie Ming and Shuangquan Wang and Mohamad Sawan},
-  booktitle={arXiv preprint arXiv:2311.14775},
-  year={2023}
-}
 ```
 
 We also recommend our previous paper about EEG-based early seizure detection, which first proposed the probabilistic prediction concept for seizure detection task, also proposed rectified weighting strategy and decision-making rule can also enhance the detection latency performance.
